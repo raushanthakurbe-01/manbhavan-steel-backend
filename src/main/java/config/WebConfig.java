@@ -40,6 +40,7 @@ public class WebConfig implements WebMvcConfigurer {
 
                         "http://localhost:5176",
                         "http://127.0.0.1:5176"
+                        "https://manbhavansteel.pages.dev"
                 )
                 .allowedMethods(
                         "GET",

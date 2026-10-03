@@ -3,9 +3,9 @@ package com.manbhavansteel.manbhavan_steel_backend.controller;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import org.springframework.http.ResponseEntity;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
-import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -80,6 +80,7 @@ public class AdminOrderController {
         return ResponseEntity.ok(orders);
     }
 
+    @Transactional
     @PatchMapping("/{id}/status")
     public ResponseEntity<?> updateOrderStatus(
             @PathVariable Long id,
